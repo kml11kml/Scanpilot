@@ -63,6 +63,12 @@ Most PDF scanner apps on Google Play are closed-source, full of ads, and ask you
 **Free version:** unlimited reading, importing and sharing + 3 scans per day.
 **ScanPilot Pro:** unlimited scans, merge, split, AI summaries, password lock, no watermark. Pro is sold through Google Play Billing (see [SALES_PLAN_EN.md](SALES_PLAN_EN.md)).
 
+## Download the APK (debug build)
+
+Every push to `main` builds a debug APK automatically with GitHub Actions. Download it from the repository's **Actions** tab → latest **Build debug APK** run → **Artifacts** → `scanpilot-debug-apk`. Install it on your phone to test (enable "Install unknown apps" for your browser/file manager when asked).
+
+This is a **debug APK for testing only** — it is not the signed release for Google Play. The Play release is a signed AAB built in Android Studio (see [Getting Started](#getting-started--build-the-app)).
+
 ## How to Scan a Document to PDF on Android
 
 1. Open ScanPilot and tap **Scan** (the big centre button).
