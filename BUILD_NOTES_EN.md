@@ -136,3 +136,9 @@ No further attempts were made, so as not to use up the user's $5 daily budget.
 - The "Nothing found" message for a search with no results has not been added yet (an empty list is shown).
 - Google Play Billing payment is a stub; prices are only suggested in `SALES_PLAN_EN.md`, in USD, not in the code.
 - The support email is a placeholder: `support@example.com` — the developer must change it.
+
+## APK build attempt on the dev VM — 2026-11-19 (failed, VM limitation)
+
+- OpenJDK 17 (Temurin) and Android SDK (cmdline-tools, platforms;android-36, build-tools;36.0.0, platform-tools) were installed in this VM at `~/workspace/tools/` and `~/workspace/android-sdk/`.
+- `gradle assembleDebug` fails at plugin resolution: `com.android.application:8.5.2` cannot be resolved. Root cause, proven with a Java test program and Maven: Java's HTTP/SSL client cannot download through this VM's egress proxy (read timeout / "Unsupported or unrecognized SSL message"), while curl downloads the same URLs fine. Gradle and Maven both use Java HTTP, so no dependency can be fetched here.
+- No APK was produced in this VM. Build the APK on Windows in Android Studio (`gradlew assembleDebug`) or via the GitHub Actions workflow in `.github/workflows/build-apk.yml` (GitHub runners have normal internet access).
