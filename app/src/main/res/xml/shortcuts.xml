@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Home screen shortcut: quick scan with one tap -->
+    <shortcut
+        android:shortcutId="scan"
+        android:enabled="true"
+        android:icon="@drawable/ic_pdf"
+        android:shortcutShortLabel="Scan document"
+        android:shortcutLongLabel="Scan a new document">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.scanpilot.app"
+            android:targetClass="com.scanpilot.app.MainActivity">
+            <extra android:name="open_scan" android:value="true" />
+        </intent>
+    </shortcut>
+</shortcuts>

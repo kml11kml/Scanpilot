@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Scanned photos (in the app cache) -->
+    <cache-path name="scan" path="scan/" />
+    <!-- Library PDF files (app private storage) -->
+    <files-path name="documents" path="documents/" />
+</paths>
